@@ -219,6 +219,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.DeleteButton.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.DeleteButton_ButtonClick);
             // 
             // FirstNameTe
             // 
@@ -368,7 +369,7 @@
             this.labelControl8.TabIndex = 25;
             this.labelControl8.Text = "Date Of Birth";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -392,7 +393,7 @@
             this.Controls.Add(this.FirstNameTe);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.CreateStudentButton);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

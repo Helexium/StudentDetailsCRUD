@@ -12,12 +12,12 @@ using static DevExpress.XtraEditors.Mask.MaskSettings;
 
 namespace MainForm
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class MainForm : DevExpress.XtraEditors.XtraForm
     {
 
         //set the list for students
         List<Student> ListOfStudents = new List<Student>();
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace MainForm
 
         private static string GenerateID()
         {
-
+            //Generates random strings for student ID
             Random rand = new Random();
             string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             string id = string.Empty;
@@ -58,6 +58,7 @@ namespace MainForm
         }
         private void GenerateStudentIDButton_Click(object sender, EventArgs e)
         {
+            //resets the Text Edit in order to replace a new generated ID
             StudentIDTe.Text = "";
             StudentIDTe.Text = GenerateID();
         }

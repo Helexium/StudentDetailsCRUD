@@ -39,6 +39,10 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EditButton = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DeleteButton = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.FirstNameTe = new DevExpress.XtraEditors.TextEdit();
             this.MiddleNameTe = new DevExpress.XtraEditors.TextEdit();
             this.LastNameTe = new DevExpress.XtraEditors.TextEdit();
@@ -56,12 +60,10 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.EditButton = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.DeleteButton = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameTe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiddleNameTe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastNameTe.Properties)).BeginInit();
@@ -71,8 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.YearLevelCbe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenderCbe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentIDTe.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeleteButton)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateStudentButton
@@ -186,6 +186,39 @@
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 105;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Edit";
+            this.gridColumn9.ColumnEdit = this.EditButton;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 8;
+            // 
+            // EditButton
+            // 
+            this.EditButton.AutoHeight = false;
+            this.EditButton.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.EditButton.Name = "EditButton";
+            this.EditButton.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.EditButton.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.EditButton_ButtonClick);
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Delete";
+            this.gridColumn10.ColumnEdit = this.DeleteButton;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 9;
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.AutoHeight = false;
+            this.DeleteButton.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // FirstNameTe
             // 
@@ -335,34 +368,6 @@
             this.labelControl8.TabIndex = 25;
             this.labelControl8.Text = "Date Of Birth";
             // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Edit";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Delete";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 9;
-            // 
-            // EditButton
-            // 
-            this.EditButton.AutoHeight = false;
-            this.EditButton.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.EditButton.Name = "EditButton";
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.AutoHeight = false;
-            this.DeleteButton.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
-            this.DeleteButton.Name = "DeleteButton";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,6 +396,8 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameTe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiddleNameTe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastNameTe.Properties)).EndInit();
@@ -400,8 +407,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.YearLevelCbe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenderCbe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentIDTe.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeleteButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

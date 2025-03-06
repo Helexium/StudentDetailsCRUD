@@ -67,13 +67,18 @@ namespace MainForm
 
         private void EditButton_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+
         }
 
         private void DeleteButton_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int rowHandle = gridView1.FocusedRowHandle;
-
-            
+            var gridView = gridView1;
+            var student = gridView.GetFocusedRow() as Student;
+            if (student != null)
+            {
+                ListOfStudents.Remove(student);
+                gridControl1.RefreshDataSource();
+            }
         }
     }
 }

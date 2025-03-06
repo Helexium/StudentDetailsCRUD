@@ -22,6 +22,8 @@ namespace MainForm
             InitializeComponent();
         }
 
+        //some change 1
+
         private void CreateStudentButton_Click(object sender, EventArgs e)
         {
             // Create a new Student
@@ -65,6 +67,13 @@ namespace MainForm
 
         private void EditButton_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+        }
+
+        private void DeleteButton_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int rowHandle = gridView1.FocusedRowHandle;
+
+            
         }
     }
 }

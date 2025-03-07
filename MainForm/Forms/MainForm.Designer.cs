@@ -60,6 +60,7 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.UpdateStudentButon = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditButton)).BeginInit();
@@ -123,7 +124,7 @@
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 90;
+            this.gridColumn1.Width = 76;
             // 
             // gridColumn2
             // 
@@ -133,7 +134,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 137;
+            this.gridColumn2.Width = 116;
             // 
             // gridColumn3
             // 
@@ -143,7 +144,7 @@
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 134;
+            this.gridColumn3.Width = 114;
             // 
             // gridColumn4
             // 
@@ -153,7 +154,7 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 161;
+            this.gridColumn4.Width = 120;
             // 
             // gridColumn5
             // 
@@ -163,7 +164,7 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 55;
+            this.gridColumn5.Width = 99;
             // 
             // gridColumn6
             // 
@@ -173,7 +174,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 83;
+            this.gridColumn6.Width = 96;
             // 
             // gridColumn7
             // 
@@ -183,7 +184,7 @@
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 103;
+            this.gridColumn7.Width = 74;
             // 
             // gridColumn8
             // 
@@ -193,7 +194,7 @@
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 105;
+            this.gridColumn8.Width = 69;
             // 
             // gridColumn9
             // 
@@ -202,6 +203,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.Width = 39;
             // 
             // EditButton
             // 
@@ -219,6 +221,7 @@
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 9;
+            this.gridColumn10.Width = 65;
             // 
             // DeleteButton
             // 
@@ -266,6 +269,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateOfBirthDe.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateOfBirthDe.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.DateOfBirthDe.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DateOfBirthDe.Properties.CalendarTimeProperties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.DateOfBirthDe.Properties.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DateOfBirthDe.Properties.CalendarTimeProperties.MaskSettings.Set("mask", "yyyy-MM-dd");
+            this.DateOfBirthDe.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
+            this.DateOfBirthDe.Properties.MaskSettings.Set("mask", "yyyy-MM-dd");
+            this.DateOfBirthDe.Properties.UseMaskAsDisplayFormat = true;
             this.DateOfBirthDe.Size = new System.Drawing.Size(100, 28);
             this.DateOfBirthDe.TabIndex = 12;
             // 
@@ -301,6 +312,8 @@
             // 
             this.StudentIDTe.Location = new System.Drawing.Point(7, 25);
             this.StudentIDTe.Name = "StudentIDTe";
+            this.StudentIDTe.Properties.ReadOnly = true;
+            this.StudentIDTe.Properties.UseReadOnlyAppearance = false;
             this.StudentIDTe.Size = new System.Drawing.Size(127, 28);
             this.StudentIDTe.TabIndex = 15;
             // 
@@ -365,9 +378,9 @@
             // 
             this.labelControl7.Location = new System.Drawing.Point(115, 113);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(50, 13);
+            this.labelControl7.Size = new System.Drawing.Size(35, 13);
             this.labelControl7.TabIndex = 24;
-            this.labelControl7.Text = "Year Level";
+            this.labelControl7.Text = "Gender";
             // 
             // labelControl8
             // 
@@ -377,11 +390,21 @@
             this.labelControl8.TabIndex = 25;
             this.labelControl8.Text = "Date Of Birth";
             // 
+            // UpdateStudentButon
+            // 
+            this.UpdateStudentButon.Location = new System.Drawing.Point(109, 166);
+            this.UpdateStudentButon.Name = "UpdateStudentButon";
+            this.UpdateStudentButon.Size = new System.Drawing.Size(94, 35);
+            this.UpdateStudentButon.TabIndex = 26;
+            this.UpdateStudentButon.Text = "Update Student\r\nDetails\r\n";
+            this.UpdateStudentButon.Click += new System.EventHandler(this.UpdateStudentButon_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 465);
+            this.Controls.Add(this.UpdateStudentButon);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl6);
@@ -455,6 +478,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit EditButton;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit DeleteButton;
+        private DevExpress.XtraEditors.SimpleButton UpdateStudentButon;
     }
 }
 
